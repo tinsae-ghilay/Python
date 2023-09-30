@@ -23,6 +23,7 @@ def blink(x):
         time.sleep(x)  # ን x ሰክንድታት ደው ንብል (delay)
         off()          # ልቺ ነጥፍእ
         time.sleep(x)  # ን x ሰከንድታት ደው ንብል (delay)
+    print("ፕሮግራም ተወዲኡ፡፡")
 
       
 # ነዚ አብ ላዕሊ ዝጸሓፍናዮ ፕሮግራም ንምትግባር 
