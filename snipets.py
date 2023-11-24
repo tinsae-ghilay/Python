@@ -13,7 +13,15 @@ result = sum_of_multiples(1000)
 print(f"Problem 1 - The sum of multiples is: {result}")
 
 
+# find nth fibonacci
+
+def nth_fibonacci(n):
+    rad_5 = 2.2360679774997
+    return (1/rad_5)*(((1+rad_5)/2)**n -((1-rad_5)/2)**n)
 # Problem 2:
+
+
+
 # Find the sum of the even-valued terms in the Fibonacci sequence whose values do not exceed four million.
 
 def sum_even_fibonacci(limit):

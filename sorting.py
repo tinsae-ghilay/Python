@@ -96,18 +96,18 @@ def insertion_sort(array,asc):
             base -= 1# reduce index to compare by 1
         start += 1# increase our starting position
     return array
-print("----------------- Incertion -------------------------")
+print("----------------- Insertion -------------------------")
 print(" Ascending ", insertion_sort(sack, True))
 print("Discending ", insertion_sort(sack, False))
 
 # bellow are needed for quick sort
 # quick sort is complicated, I had to look at wikipedia
-# @ https://en.wikipedia.org/wiki/Quicksort - read it, try to understand it.
+# @ [[https://en.wikipedia.org/wiki/Quicksort | wikipedia]] - read it, try to understand it.
 # and then look at implementations (Java version) was understandable as I know the syntax already.
 # @ https://www.javatpoint.com/quick-sort and write code step by step. was worth it!!!!
 
 # here we do sorting of half? of the partition?
-def partition (array, start, end, asc = True):
+def partition (array, start, end, asc):
 
     # comparison starts between beginning and end elements
     base = start-1
@@ -119,11 +119,13 @@ def partition (array, start, end, asc = True):
             # move item towards pivot position
             base += 1
             array[base], array[i] = array[i], array[base]
+
         elif not asc and array[i] > pivot:# discending and pivot is smaller than current elemnt
             # move item towards pivot position
             base += 1
             array[base], array[i] = array[i], array[base]
     # no idea why this is happening?
+    
     array[base+1], array[end] = array[end], array[base+1]
 
     return base+1
@@ -135,7 +137,7 @@ def sort_quick(array,start, end,asc):
     if start < end:
         # devide array in to 2 partitions
         # and sort it
-        part = partition(array, start, end)
+        part = partition(array, start, end,asc)
         sort_quick(array,start,part-1,asc)
         sort_quick(array,part+1,end,asc)
 
@@ -145,11 +147,11 @@ def quick_sort(array,asc):
     start , end =0 , len(array)-1
     sort_quick(array,start, end,asc)
     
-    print(array)
+    return array
 
 print("----------------- Quick sort -------------------------")
-print(" Ascending ", insertion_sort(sack, True))
-print("Discending ", insertion_sort(sack, False))
+print(" Ascending ", quick_sort(sack, True))
+print("Discending ", quick_sort(sack, False))
 
 
 
