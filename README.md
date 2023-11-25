@@ -306,8 +306,9 @@ def insertion_sort(array,asc):
 # bellow are needed for quick sort
 # quick sort is complicated, I had to look at wikipedia
 # @ https://en.wikipedia.org/wiki/Quicksort - read it, try to understand it.
-# and then look at implementations (Java version) was understandable as I know the syntax already.
-# @ https://www.javatpoint.com/quick-sort and write code step by step. was worth it!!!!
+# and then look at implementations @ https://www.javatpoint.com/quick-sort.
+# Java version was understandable as I know the syntax already.
+# and write code step by step. was worth it!!!!
 
 # here we do sorting of half? of the partition?
 def partition (array, start, end, asc):
@@ -317,13 +318,15 @@ def partition (array, start, end, asc):
     pivot = array[end]
     for i in range (start,end):
         # current element is at iterating position
-        # If current element is smaller than or equal to the pivot(final element)  
-        if asc and array[i] < pivot:# ascending and pivot is bigger than current elemnt
+        # If current element is smaller than or equal to the pivot(final element)
+        # ascending and pivot is bigger than current elemnt?  
+        if asc and array[i] < pivot:
             # move item towards pivot position
             base += 1
             array[base], array[i] = array[i], array[base]
 
-        elif not asc and array[i] > pivot:# discending and pivot is smaller than current elemnt
+        # discending and pivot is smaller than current elemnt?
+        elif not asc and array[i] > pivot:
             # move item towards pivot position
             base += 1
             array[base], array[i] = array[i], array[base]
