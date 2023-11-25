@@ -1,4 +1,70 @@
 # Python
+## practice res
+``` Python
+# Implementieren Sie in dieser Zelle Ihr gesamtes Programm. 
+# Code außerhalb dieser Zelle wird bei der Bewertung nicht berücksichtigt.
+# Die Funktion A soll Ihre Lösung als Integer zurückgeben.
+# Sie können zusätzlich noch beliebig viele Unterfunktionen definieren
+
+# start with prime
+def is_prime(n):
+    if n <= 3: 
+        # if less than 4, it has to be greater than 1 (2 and 3)
+        return n > 1
+    # eliminate multiples of 2 and 3
+    if n % 2 == 0 or n % 3 == 0:
+        return False
+
+    # any number that doesnt have a factor 
+    # below it's square root, wont have any 
+    lim = int(n**0.5)+1
+    for i in range(5, lim, 6):
+
+        if n % i == 0 or n % (i+2) == 0:
+            return False
+    return True
+
+# get list of primes
+def getPrimes(l,h):
+    primes = []
+    for i in range(l,h+1):
+        if is_prime(i):
+            primes.append(i)
+
+    return primes
+
+def no_six(n):
+    res = True
+    while n:
+        if n%10 ==6:
+            return False
+        n= n//10
+    return res
+
+def isBalance(a,b,c):
+    #print( " checking", b)
+    mean = (a+c)/2 == b
+    
+    balance = b-a == c-b
+    return mean and no_six(b)
+
+
+
+def A(n, m):
+    # DEINE ANTWORT HIER
+    
+    primes = getPrimes(n,m)
+    sum = 0
+
+    for i in range(len(primes)-1):
+        #print( " checking", primes[i])
+
+        balance = isBalance(primes[i-1],primes[i],primes[i+1])
+        if balance:
+            #print("is balance ", primes[i])
+            sum += primes[i]
+    return sum
+```
 ## Code snipets for Programming course WS/23
 
 ### Factorial
