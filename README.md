@@ -14,21 +14,27 @@ def factorial(n):
 ```
 ### Prime numbers
 
-#### is a number prime
+#### Is a number prime?
 ``` Python
-# code from wikipedia with modification
-# upper limit as (n//2)+1 instead of sqrt(n)
+# code from wikipedia
 def is_prime(n: int):
-    if n <= 3:
+    if n <= 3: 
+        # if less than 3, it has to be greater than 2 (2 and 3)
         return n > 1
+    # eliminate multiples of 2 and 3
     if n % 2 == 0 or n % 3 == 0:
         return False
-    for i in range(5, (n//2)+1, 6):
+
+    # any number that doesnt have a factor 
+    # below it's square root, wont have any 
+    lim = int(n**0.5)+1
+    for i in range(5, lim, 6):
+
         if n % i == 0 or n % (i+2) == 0:
             return False
     return True
 ```
-#### n<sup>th</sup> prime number
+#### N<sup>th</sup> prime number
 ``` python
 def get_nth_prime(n):
     # count number of primes found,
@@ -43,7 +49,7 @@ def get_nth_prime(n):
     return digit
 ```
 ### Factors and multiples
-#### prime factor
+#### Prime factor
 ``` Python
 def largest_prime_factor(n):
     # Initialize the divisor as the smallest prime number
@@ -57,19 +63,19 @@ def largest_prime_factor(n):
     # The remaining value of n is the largest prime factor
     return n 
 ```
-#### greatest common factor
+#### Greatest common factor
 ``` python
 def gcd(a, b):
     while b:
         a, b = b, a % b
     return a
 ```
-#### least common multiple
+#### Least common multiple
 ``` Python
 def lcm(a, b):
     return abs(a * b) // gcd(a, b)
 ```
-#### smallest multiple 
+#### Smallest multiple 
 ``` python
 def smallestMultiple(n):
     ans = 1
@@ -79,7 +85,7 @@ def smallestMultiple(n):
 ```
 
 ### Sums
-#### sum of multiples of 3 or 5
+#### Sum of multiples of 3 or 5
 ``` Python
 def sum_of_multiples(limit):
     total = 0 
@@ -91,7 +97,7 @@ def sum_of_multiples(limit):
             total += i 
     return total
 ```
-#### sum of even fibonacci numbers
+#### Sum of even fibonacci numbers
 ``` Python
 def sum_even_fibonacci(limit):
     # first two terms of the Fibonacci sequence
@@ -108,7 +114,7 @@ def sum_even_fibonacci(limit):
     return total 
 ```
 ### Fibonacci sequence
-#### is a number in Fibonacci sequence?
+#### Is a number in Fibonacci sequence?
 ``` python
 def is_perfect_square(n):
     # According to some one named Kurt Mager in Quora, @ https://qr.ae/pKMa62
@@ -156,7 +162,7 @@ def fibonacci_seq(n):
 
 functions may depend on one another or not. attention needed
 
-#### reverse a number
+#### Reverse a number
 ``` python
 # reversing an integer
 # int reversed tni ;-)
@@ -171,18 +177,18 @@ def tni(n):
         n = n // 10
     return mun
 ```
-#### is number Palindrom
+#### Is number Palindrom
 ``` Python
 def is_palindrome(n):
     return n == tni(n)
 ```
-#### is number a Mirp?
+#### Is number a Mirp?
 
 ``` Python
 def is_mirp(n):
     return is_prime(n) and not is_palindrome(n) and is_prime(tni(n))
 ```
-#### get mirps in a range
+#### Get mirps in a range
 
 ``` Python
 def get_mirps(m,n):
