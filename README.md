@@ -15,7 +15,7 @@ def factorize(n):
 #### Is a number prime?
 ``` Python
 # code from wikipedia
-def is_prime(n: int):
+def is_prime(n):
     if n <= 3: 
         # if less than 3, it has to be greater than 2 (2 and 3)
         return n > 1
