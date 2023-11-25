@@ -1,5 +1,5 @@
 # Python
-## practice res
+## practice test
 ``` Python
 # Implementieren Sie in dieser Zelle Ihr gesamtes Programm. 
 # Code außerhalb dieser Zelle wird bei der Bewertung nicht berücksichtigt.
