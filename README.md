@@ -42,7 +42,7 @@ def get_nth_prime(n):
     while count <= n:
         digit+=1
         if is_prime(digit):
-            # increase primes count if on is found
+            # increase primes count if one is found
             count+=1
     return digit
 ```
