@@ -17,7 +17,7 @@ def factorize(n):
 # code from wikipedia
 def is_prime(n):
     if n <= 3: 
-        # if less than 3, it has to be greater than 2 (2 and 3)
+        # if less than 4, it has to be greater than 1 (2 and 3)
         return n > 1
     # eliminate multiples of 2 and 3
     if n % 2 == 0 or n % 3 == 0:
