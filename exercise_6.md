@@ -137,7 +137,7 @@ e.g. M(100, 1100) = 113 + 311 + 1021 + 1031 + 1061 + 1091 = 4628
                     5.1, hier schauen wir, ob Mirp genau zwei einser hat.
                          wenn ja, addieren wir des zu Summe
                          
-       und geben wir resulat von Nr 5 als rückgabe.
+       und geben wir resultät von Nr 5 als rückgabe.
 '''
 
 # checks if a number ´n´ is prime or not and returns a boolean accordingly
