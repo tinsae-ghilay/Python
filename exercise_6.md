@@ -123,7 +123,7 @@ e.g. M(100, 1100) = 113 + 311 + 1021 + 1031 + 1061 + 1091 = 4628
 ``` Python
 # Im sinn des Teile und Herrsche Principle
 '''
-    1, werden wirp verifizieren weder ein nummer Prime ist oder nicht
+    1, werden wir verifizieren weder ein nummer Prime ist oder nicht
     2, werden wir schauen ob der reverse von nummer auch Prime ist
     
                     2.1, für des werden wir nummer in reverse schreiben
