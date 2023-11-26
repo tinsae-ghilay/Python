@@ -140,7 +140,7 @@ e.g. M(100, 1100) = 113 + 311 + 1021 + 1031 + 1061 + 1091 = 4628
        und geben wir resulat von Nr 5 als rückgabe.
 '''
 
-# code from wikipedia
+# checks if a number ´n´ is prime or not and returns a boolean accordingly
 def is_prime(n):
     if n <= 3: 
         # if less than 4, it has to be greater than 1 (2 and 3)
