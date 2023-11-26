@@ -37,7 +37,7 @@ def ggt(a,b):
 ### Nested Array.
 implement a program, that adds all integer values inside a 3-D array. if there are no integers,
 it should return 0, if there are, it should return the sum of all of them. e.g for the array
- [1, [2, [3]], 4.44, [5, ["Hallo", 6]]] the naswer should be 17 (1 + 2 + 3 + 5 + 6). 
+`  [1, [2, [3]], 4.44, [5, ["Hallo", 6]]] ` the naswer should be 17 (1 + 2 + 3 + 5 + 6). 
 the calculation should happen using recurson in a function `nested_sum(array)`
 
 ### Solution ###
