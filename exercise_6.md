@@ -98,7 +98,7 @@ def sigma(n):
             res+=i
     return res
 
-# vor ein paar jahre war die prüfung einfacher wie heuer .;-|
+# vor ein paar jahre war die prüfung einfacher.;-|
 
 def S(m, d):
     # DEINE ANTWORT HIER
