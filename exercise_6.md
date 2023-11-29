@@ -200,7 +200,6 @@ def has_two_ones(n):
 
 def M(n, m):
     
-    # DEINE ANTWORT HIER
     res = 0
 
     mirps = get_mirps(n,m)
