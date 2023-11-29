@@ -59,11 +59,7 @@ the calculation should happen using recurson in a function `nested_sum(array)`
     '''
 
 def add(array, index):
-    
-    # since length to index is length-1, if length < 0 nothing to add
-    # we return 0
-    if index < 0: 
-        return 0 
+    
     # if there are elements, we check if item is type int and add if it is
     # and call function again i.e 'Primitive Rekursion'
     if type(array[index])== int:
@@ -102,7 +98,7 @@ def sigma(n):
             res+=i
     return res
 
-# vor ein paar jahre war die prüfung einfacher wie heuer .;-|
+# vor ein paar jahre war die prüfung einfacher.;-|
 
 def S(m, d):
     # DEINE ANTWORT HIER
