@@ -209,7 +209,6 @@ Bubble sort
  source of algorithm @ https://en.wikipedia.org/wiki/Bubble_sort
  improved version to skip over sorting items with same value
 '''
-sack = [4,2,6,8,9,3,4,6,7,1,0,-3,-7]
 def bubble_sort(array,asc):
 
     if len(array) == 0:
